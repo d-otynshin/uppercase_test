@@ -1,0 +1,24 @@
+.search-bar {
+  display: flex;
+
+  color: #929bbc;
+
+  outline: none;
+  border: none;
+  border-radius: 5px;
+
+  width: 100%;
+}
+
+.search-bar__container {
+  display: flex;
+  padding: 10px 15px;
+
+  height: 40px;
+  width: 280px;
+
+  background-color: #fcfcff;
+
+  border: 1px solid #e6eaf5;
+  border-radius: 5px;
+}

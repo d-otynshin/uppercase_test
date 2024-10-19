@@ -1,0 +1,10 @@
+.user__container {
+  display: flex;
+  gap: 10px;
+}
+
+.user__text {
+  font-weight: 400;
+  font-style: 14px;
+  color: #000;
+}

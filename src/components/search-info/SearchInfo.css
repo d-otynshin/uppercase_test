@@ -1,0 +1,26 @@
+.search-info__container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin: 38px auto 58px;
+}
+
+.search-info__text {
+  display: flex;
+  gap: 4px;
+
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.search-info__count {
+  padding: 5px 15px;
+  background-color: #6627ff;
+  border-radius: 5px;
+
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
