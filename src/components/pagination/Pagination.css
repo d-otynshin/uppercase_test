@@ -1,0 +1,82 @@
+.Pagination__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin: 84px 0 60px;
+}
+
+.Pagination__pages {
+  display: flex;
+  flex-direction: row;
+}
+
+.Pagination__pages__block {
+  display: flex;
+  flex-direction: row;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.Pagination__pages__item {
+  cursor: pointer;
+  font-size: 12px;
+
+  height: 27px;
+  width: 30px;
+
+  color: #010515;
+
+  border: 1px solid #e6eaf5;
+  border-right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+
+  cursor: pointer;
+}
+
+.Pagination__pages__item:first-child {
+  border-left: 0;
+}
+
+.Pagination__pages__item:last-of-type {
+  border-right: 0;
+}
+
+.Pagination__pages__dots {
+  height: 27px;
+  width: 30px;
+  border: 1px solid #e6eaf5;
+}
+
+.Pagination__button {
+  border: 1px solid #e6eaf5;
+  cursor: pointer;
+
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Pagination__button--right {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.Pagination__button--left {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.active {
+  background-color: aliceblue;
+}
