@@ -6,40 +6,34 @@ import { getMovies } from "../../api/index.ts";
 import { useQuery } from "@tanstack/react-query";
 
 interface IContent {
-  search: any;
-  setSearch: (prevSearch: any) => void;
+  query: string;
+  page: number;
+  setPage: (page: number) => void;
 }
 
-export const Content = ({ search, setSearch }: IContent) => {
+export const Content = ({ query, page, setPage }: IContent) => {
   const { data, isFetching } = useQuery({
-    queryKey: ["search", search.query, search.page],
-    queryFn: async () => await getMovies(search.query, search.page),
-    enabled: Boolean(search.query),
+    queryKey: ["search", query, page],
+    queryFn: async () => await getMovies(query, page),
+    enabled: Boolean(query),
   });
-
-  const handleChange = (page: number) => {
-    setSearch((prevSearch) => ({ ...prevSearch, page }));
-  };
 
   return (
     <>
-      {search.query && (
+      {query && (
         <SearchInfo
-          searchedText={search.query}
+          searchedText={query}
           foundMoviesCount={data?.totalResults || 0}
         />
       )}
-      <Cards
-        query={search.query}
-        movies={data?.Search}
-        isFetching={isFetching}
-      />
+
+      <Cards query={query} movies={data?.Search} isFetching={isFetching} />
 
       {data?.Response === "True" && (
         <Pagination
-          changeEvent={handleChange}
+          changeEvent={setPage}
           pagesCount={Math.ceil(data?.totalResults / 10)}
-          selectedPage={search.page}
+          selectedPage={page}
           isHideButtons={false}
         />
       )}

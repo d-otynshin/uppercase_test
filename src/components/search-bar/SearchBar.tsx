@@ -13,11 +13,10 @@ const debounce = (cb, delay) => {
   };
 };
 
-export const SearchBar = ({ setSearch }: any) => {
+export const SearchBar = ({ setQuery }: any) => {
   const handleSearch = useCallback(
     debounce((e) => {
-      const query = e.target.value;
-      setSearch((search: any) => ({ ...search, query }));
+      setQuery(e.target.value);
     }, 500),
     []
   );

@@ -4,11 +4,11 @@ import { SearchBar } from "../search-bar/SearchBar.tsx";
 import { User } from "../user/User.tsx";
 import "./Header.css";
 
-export const Header = ({ setSearch }: any) => {
+export const Header = ({ setQuery }: any) => {
   return (
     <header className='header'>
       <img src={upperLogo} alt='UPPERSETUP Logo' title='UPPERSETUP' />
-      <SearchBar setSearch={setSearch} />
+      <SearchBar setQuery={setQuery} />
       <User />
     </header>
   );
